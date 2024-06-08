@@ -27,8 +27,8 @@ import viteLogo from '/vite.svg'
 // }
 
 
-//2. Move the var and the setvaribale to another function 
-// wo part hi bs re render hoga jiski val change horahi!
+// //2. Move the var and the set varibale to another function 
+// // wo part hi bs re render hoga jiski val change horahi!
 // function App() {
   
 //   return (
@@ -52,8 +52,13 @@ import viteLogo from '/vite.svg'
 //   }
 
 //   return <div>
+//     {/*
+//     ye neeche wale change ni hore but ye bhi re render honge!
+//     */}
 //     <button onClick={updateTitle}>Click me to Change the title</button>
 //     <Header title={title}></Header>
+//     <Header title="Jainxx"></Header>
+//     <Header title="Jainxxx"></Header>
 //   </div>
 // }
 
@@ -63,10 +68,9 @@ import viteLogo from '/vite.svg'
 //   </div>
 // }
 
-// 3. And the best approach is to use React Memo (Memoization!)
+// // 3. And the best approach is to use React Memo (Memoization!)
 function App() {
   const [title, setTitle] = useState("My name is Harshit")
-  //but as you update the title the whole div is re-rendered and you don't want that!!
   function updateTitle(){
     setTitle("My name is " + Math.random());
   }
@@ -78,6 +82,12 @@ function App() {
           baki neeche wale bhi honge
           but as a whole 1st wale me individually sb rerender hore the!! */}
           <Header title={title}></Header>
+          <Header title="Jain"></Header>
+          <Header title="Jain"></Header>
+          <Header title="Jain"></Header>
+          <Header title="Jain"></Header>
+          <Header title={title}></Header>
+          <Header title="Jain"></Header>
           <Header title="Jain"></Header>
           <Header title="Jain"></Header>
           <Header title="Jain"></Header>

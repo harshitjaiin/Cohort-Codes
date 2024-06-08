@@ -18,11 +18,12 @@ function App() {
   desc:"MBA"
 }]);
 
-let id = 4;
-  const [desc, setDesc] = useState("body Banao")
+  const [id, setId] = useState(4);
   function addTodo(){
+    setId(id+1);
+    console.log(id);
     setTodos([...todos , {
-      id:id++,
+      id:id,
       title:Math.floor(1000*Math.random()),
       desc:Math.floor(1000*Math.random())
     }]);
